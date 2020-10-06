@@ -9,15 +9,16 @@ namespace BullseyePut_together
 {
     public class TimerAndDifficulty
     {
-        public static int maxTime = 10000;
+        public static int currentTime = 0;
+        public static int maxTime = 20000;
         public static void Difficulty()
         {
            
-            int sloth = 200;
-            int giantTurtle = 100;
-            int greenIguana = 40;
-            int cheetah = 20;
-            int peregrineFalcon = 10;
+            int sloth = 400;
+            int giantTurtle = 200;
+            int greenIguana = 80;
+            int cheetah = 40;
+            int peregrineFalcon = 20;
 
             Console.WriteLine("Choose a time difficulty 1:Sloth 2:Giant Turtle 3:Green Iguana 4:Cheetah 5:Peregrine Falcon. Please enter the number.");
             int choiceTimer = Convert.ToInt32(Console.ReadLine());
@@ -46,17 +47,17 @@ namespace BullseyePut_together
 
         public static void timer()
         {
-            
-            int currentTime = 0;
+            Console.WriteLine($"{currentTime}");
+            Thread.Sleep(500);
+            currentTime++;
 
-            Console.WriteLine($"{maxTime}");
-            Console.ReadLine();
-            while (currentTime < maxTime)
+            if(currentTime >= maxTime)
             {
-                Console.WriteLine($"{currentTime}");
-                Thread.Sleep(1000);
-                currentTime++;
+                targetHit.HitLoss();
             }
+
+            RandomNumAndCursorTracking.CursorTracking();
+            
         }
     }
 }

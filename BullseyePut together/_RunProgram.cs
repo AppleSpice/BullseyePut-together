@@ -16,6 +16,9 @@ namespace BullseyePut_together
             HotColdDificulty.Difficulty(); //decide how close you have to be
             Console.WriteLine("Hit enter when you are ready to start.");
             Console.ReadLine();
+            RandomNumAndCursorTracking.randomNum(); //gets random number
+            TimerAndDifficulty.timer(); //starts main part of game
+
 
         }
     }

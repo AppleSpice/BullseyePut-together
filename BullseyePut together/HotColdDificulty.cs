@@ -10,6 +10,7 @@ namespace BullseyePut_together
     {
 
         public static double difficulty;
+        public static bool gameOver = true;
         public static void Difficulty()
         {
             int easy = 25;
@@ -41,31 +42,38 @@ namespace BullseyePut_together
 
         public static void HotCold()
         {
-           
-            double distance = Math.Floor(Math.Sqrt(Math.Pow(RandomNumAndCursorTracking.userX - RandomNumAndCursorTracking.randomX, 2) + Math.Pow(RandomNumAndCursorTracking.UserY - RandomNumAndCursorTracking.randomY, 2)));
+            
+            double distance = Math.Floor(Math.Sqrt(Math.Pow(RandomNumAndCursorTracking.userX - RandomNumAndCursorTracking.randomX, 2) + Math.Pow(RandomNumAndCursorTracking.userY - RandomNumAndCursorTracking.randomY, 2)));
+            
             if (distance > 400)
             {
                 Console.WriteLine("Frozen");
+                TimerAndDifficulty.timer();
             }
             else if (distance >= 200)
             {
                 Console.WriteLine("Ice Cold");
+                TimerAndDifficulty.timer();
             }
             else if (distance >= 100)
             {
                 Console.WriteLine("Cold");
+                TimerAndDifficulty.timer();
             }
             else if (distance >= 50)
             {
                 Console.WriteLine("Warm");
+                TimerAndDifficulty.timer();
             }
             else if (distance >= 30)
             {
                 Console.WriteLine("On Fire");
+                TimerAndDifficulty.timer();
             }
             else if (distance >= difficulty)
             {
                 Console.WriteLine("Hit");
+                targetHit.HitWin();
             }
         }
     }
