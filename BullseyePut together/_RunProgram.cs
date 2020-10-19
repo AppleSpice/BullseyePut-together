@@ -11,6 +11,7 @@ namespace BullseyePut_together
         public static void start()
         {
             DataCreateCheck.DataCheck(); //makes sure data.txt is there
+            ScorePrint.lastScore();
             PlayerName.playerName(); //Gets and prints player name
             TimerAndDifficulty.Difficulty(); //decide how much time you get
             HotColdDificulty.Difficulty(); //decide how close you have to be
@@ -19,6 +20,8 @@ namespace BullseyePut_together
             RandomNumAndCursorTracking.randomNum(); //gets random number
             TimerAndDifficulty.timer(); //starts main part of game
 
+            PrintScorePlayAgain.OutputScore();//sends score to data.txt
+            PrintScorePlayAgain.PlayAgain();//asks player to play again
 
         }
     }

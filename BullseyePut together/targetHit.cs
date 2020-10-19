@@ -14,14 +14,12 @@ namespace BullseyePut_together
         {
             Console.WriteLine($"You won!!!!!!");
             Process.Start("Chrome.exe", "https://www.youtube.com/watch?v=mnpjpdhUNjY");
-            Console.ReadLine();
         }
 
         public static void HitLoss()
         {
             Console.WriteLine($"You couldn’t hit the broad side of a barn with a bowling ball. Maybe try again.");
             Process.Start("Chrome.exe", "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-            Console.ReadLine();
         }
     }
 }

@@ -70,10 +70,10 @@ namespace BullseyePut_together
                 Console.WriteLine("On Fire");
                 TimerAndDifficulty.timer();
             }
-            else if (distance >= difficulty)
+            else if (distance > difficulty)
             {
-                Console.WriteLine("Hit");
                 targetHit.HitWin();
+                Console.WriteLine("Hit");
             }
         }
     }

@@ -8,11 +8,12 @@ namespace BullseyePut_together
 {
     class PlayerName
     {
+        public static string playerName1;
         public static void playerName()
         {
             Console.WriteLine("Please enter your name");
-            string playerName = Console.ReadLine(); // need to get name with the score
-            Console.WriteLine($"Hello {playerName}. Nice to meet you.");
+            playerName1 = Console.ReadLine(); // need to get name with the score
+            Console.WriteLine($"Hello {playerName1}. Nice to meet you.");
         }
     }
 }

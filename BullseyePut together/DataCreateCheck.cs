@@ -21,7 +21,7 @@ namespace BullseyePut_together
                 {
                     //puts text in it
                     Byte[] info =
-                   new UTF8Encoding(true).GetBytes("This is where we will keep the score \n");
+                   new UTF8Encoding(true).GetBytes("N/A");
 
                     fs.Write(info, 0, info.Length);
                     fs.Close();
@@ -29,12 +29,7 @@ namespace BullseyePut_together
             }
             else
             {
-                //writes in file for test
-                using (StreamWriter sw = new StreamWriter(path))
-                {
-                    sw.WriteLine("This is where we will keep the score 2 \n");
-                    sw.Close();
-                }
+               
             }
         }
     }
